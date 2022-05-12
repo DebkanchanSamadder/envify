@@ -1,5 +1,6 @@
 import 'package:analyzer/dart/element/element.dart';
 import 'package:analyzer/dart/element/nullability_suffix.dart';
+import 'package:build/build.dart';
 import 'package:source_gen/source_gen.dart';
 
 /// Generate the line to be used in the generated class.
@@ -77,11 +78,13 @@ String generateLine(FieldElement field, String? value) {
     })();
   }
 
-  if (field.type.isDynamic) {
-    typeString = '';
-  } else if (parsedValue == null) {
-    typeString += '?';
-  }
+  // if (field.type.isDynamic) {
+  //   typeString = '';
+  // } else if (parsedValue == null) {
+  //   typeString += '?';
+  // }
+
+  typeString = field.type.getDisplayString(withNullability: true);
 
   return 'static const $typeString ${field.name} = $parsedValue;';
 }
