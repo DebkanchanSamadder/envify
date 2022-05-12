@@ -13,6 +13,7 @@ dependencies:
   envify:
     git:
       url: https://github.com/DebkanchanSamadder/envify.git
+      branch: migrate/flutter3
       path: envify
   path: ^1.8.0
   source_gen: ^1.0.0
