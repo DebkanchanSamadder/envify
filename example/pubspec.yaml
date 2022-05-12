@@ -9,7 +9,7 @@ dependencies:
   envify:
     git:
       url: https://github.com/DebkanchanSamadder/envify.git
-      branch: migrate/flutter3
+      ref: migrate/flutter3
       path: envify
 
 dev_dependencies:
@@ -17,7 +17,7 @@ dev_dependencies:
   envify_generator:
     git:
       url: https://github.com/DebkanchanSamadder/envify.git
-      branch: migrate/flutter3
+      ref: migrate/flutter3
       path: envify_generator
 
 dependency_overrides:
